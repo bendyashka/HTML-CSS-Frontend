@@ -1,0 +1,92 @@
+body {
+  background-color: lightblue;
+}
+
+header {
+  background-color: #292929; /* Укажите цвет фона */
+  color: #fff; /* Укажите цвет текста */
+  padding: 10px 0;
+  text-align: center;
+  position: fixed; /* Зафиксируйте шапку */
+  top: 0;
+  width: 100%;
+}
+
+nav {
+  display: flex; /* Выровняйте ссылки по горизонтали */
+  justify-content: center;
+  gap: 15px; /* Укажите расстояние между ссылками */
+}
+
+nav a {
+  color: #fff; /* Укажите цвет ссылок */
+  text-decoration: none; /* Уберите подчеркивание */
+  padding: 10px;
+}
+.hero {
+  background-image: url('image.jpg'); /* Добавьте ссылку на изображение */
+  background-size: cover; /* Укажите размер фона */
+  background-position: center; /* Позиционируйте изображение */
+  height: 100vh; /* Укажите высоту секции */
+  display: flex; /* Используйте Flexbox */
+  justify-content: center; /* Выровняйте элементы по горизонтали */
+  align-items: column; /* Выровняйте элементы по вертикали */
+  text-align: center; /* Выровняйте текст */
+  color: #fff; /* Укажите цвет текста */
+}
+.about {
+  padding: 50px 50px;
+  display: flex; /* Используйте Flexbox */
+  justify-content: center; /* Выровняйте содержимое */
+  gap: 50px; /* Укажите расстояние между элементами */
+}
+
+.about-text {
+  flex: 1; /* Задайте, как текст будет занимать пространство */
+  min-width: 50px;
+}
+
+.about img {
+  flex: 3;
+  max-width: 40%; /* Установите максимальную ширину изображения */
+  max-height: 40%;
+  border-radius: 10px; /* Добавьте скругленные углы */
+} 
+.services {
+  background-color: rgba(203, 231, 203, 0.8); /* Цвет фона */
+  padding: 50px 50px;
+  text-align: center;
+}
+
+.cards {
+  display: flex; /* Используйте Flexbox */
+  justify-content: center; /* Выровняйте карточки */
+  gap: 20px; /* Расстояние между карточками */
+}
+
+.card {
+  background-color: #ffffff; /* Цвет фона карточки */
+  padding: 20px;
+  width:280px; /* Укажите ширину карточки */
+  border-radius: 8px; /* Скруглите углы */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Добавьте тень */
+}
+footer {
+  background-color: #8f2c2c; /* Укажите цвет фона */
+  color: #fff; /* Цвет текста */
+  text-align: center; /* Выравнивание текста */
+  padding: 20px;
+}
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 2rem; /* Уменьшите размер текста */
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .about, .cards {
+    flex-direction: column; /* Сделайте элементы вертикальными */
+  }
+}
