@@ -1,16 +1,18 @@
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #000;
-  color: #fff;
+  background-color: #000; 
+  color: #fff; 
 }
 
 header {
   text-align: center;
   padding: 20px;
-  background-color: #111;
+  background-color: #111; 
   color: #ffcc00;
+  font-size: 24px;
 }
 
 #searchBar {
@@ -26,19 +28,57 @@ main {
   flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
-  gap: 20px;
+  gap: 20px; 
 }
 
+
 .character-card {
-  background: #222;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(255, 255, 0, 0.2);
+  position: relative;
   width: 200px;
-  padding: 15px;
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #222; 
   text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .character-card img {
-  max-width: 100%;
-  border-radius: 8px;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #444;
 }
+
+.character-card h3 {
+  margin: 10px 0;
+  font-size: 18px;
+  color: #ffcc00; 
+}
+
+.character-card p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ccc; 
+}
+
+
+.character-card:hover {
+  transform: scale(1.05); 
+  box-shadow: 0 4px 10px rgba(255, 255, 0, 0.6); 
+}
+
+
+.additional-info {
+  display: none;  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.character-card:hover .additional-info {
+  display: block;}
